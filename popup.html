@@ -8,13 +8,29 @@
             min-width: 220px;
             overflow: scroll;
         }
+
+        .video_div {
+            display: inline-flex;
+            background: #d0d0d0a1;
+            padding: 10px;
+        }
+
+        .thumbnail {
+            width: 100%;
+            padding-right: 5px;
+        }
+
+        .thumbnail img {
+            width: 100%;
+        }
     </style>
 </head>
 
 <body>
     <button id="videoLoader">Load</button>
+    <button id="getList">Get list</button>
     <div class="outer_div" id="playlist">
-        
+        <div></div>
     </div>
     <script src="popup.js"></script>
 </body>
