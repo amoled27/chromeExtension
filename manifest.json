@@ -1,0 +1,22 @@
+{
+    "name": "Youtube Feed Playlist",
+    "description": "Playlist of all the videos in your personolized youtube feed/home",
+    "version": "1.0",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "tabs",
+        "<all_urls>"
+    ],
+    "background": {
+        "scripts": [
+            "background.js",
+            "getVideoData.js"
+        ],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 2
+}
