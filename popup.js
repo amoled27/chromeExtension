@@ -2,7 +2,8 @@ const btn = document.getElementById("videoLoader");
 const btn2 = document.getElementById("getList");
 const setHtmlData = (videoArr) => {
     videoArr.forEach((video,index) => {
-        let innerVideoHTML = `<div class="video_div">
+        console.log('ddddd')
+        let innerVideoHTML = `<div class="video_div" id="vid_${index}">
                                     <div class="thumbnail">
                                         <img src="${video.thumbnail}">
                                     </div>
@@ -10,7 +11,9 @@ const setHtmlData = (videoArr) => {
                                         <a href="${video.link}">${video.title}</a>
                                     </div>
                              </div>`;
-        document.getElementById('playlist').innerHTML = innerVideoHTML;
+        let htmlEl = document.getElementById('playlist');
+
+        htmlEl.innerHTML += innerVideoHTML + '</br>'; 
     });
 }
 btn.onclick = () => {
