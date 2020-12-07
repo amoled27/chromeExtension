@@ -17,10 +17,6 @@ const setHtmlData = (videoArr) => {
     });
 }
 
-btn.onclick = () => {
-   
-}
-
 
 btn2.onclick = () => {
     chrome.storage.sync.get(['videoData'], function (res) {
