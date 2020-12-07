@@ -16,14 +16,14 @@ const setHtmlData = (videoArr) => {
         htmlEl.innerHTML += innerVideoHTML + '</br>'; 
     });
 }
+
 btn.onclick = () => {
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-        chrome.tabs.executeScript(tabs[0].id, { file: "getVideoData.js" });
-    });
+   
+}
+
 
 btn2.onclick = () => {
     chrome.storage.sync.get(['videoData'], function (res) {
         setHtmlData(res.videoData);
     });
-}
 }
